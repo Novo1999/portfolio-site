@@ -38,8 +38,8 @@ const HeroSection = () => {
      </div>
     </div>
     <div className="col-span-5 place-self-center mt-4 lg:mt-0">
-     <div className='rounded-full bg-[#181818] relative w-[300px] h-[300px] lg:w-[400px] lg:h-[400px]'>
-      <Image className='absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2' src="/images/folio-hero.png" alt='hero image' width={300} height={300} />
+     <div className='rounded-full bg-black relative w-[300px] h-[300px] lg:w-[300px] lg:h-[300px]'>
+      <Image className='absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 left-[10rem] sm:scale-150 sm:left-[17.1rem]' src="/images/folio-hero.png" alt='hero image' width={800} height={800} />
      </div>
     </div>
    </div>

@@ -4,7 +4,7 @@ import { sendEmail } from '../../lib/email'
 
 export default async function handler(req, res) {
   await sendEmail({
-    to: 'novorony52@gmail.com',
+    to: 'neptune.navo@gmail.com',
     subject: 'Welcome to NextAPI',
     html: render(WelcomeTemplate()),
   })
