@@ -5,8 +5,6 @@ import { motion } from 'framer-motion'
 
 
 const HeroSection = () => {
- const { width } = useWindowDimensions()
- console.log(w)
  return (
   <section>
    <div className="grid grid-cols-1 sm:grid-cols-12 relative md:top-6">
