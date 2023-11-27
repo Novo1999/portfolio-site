@@ -3,11 +3,15 @@ import Image from 'next/image'
 import { useState, useTransition } from 'react'
 import TabButton from './TabButton'
 import { TABS, TAB_DATA } from '../constant'
+import { useContext } from 'react'
+import { ScrollContext } from '../page'
+
 
 
 const AboutSection = () => {
   const [tab, setTab] = useState('skills')
   const [isPending, startTransition] = useTransition()
+  const { sectionRefs } = useContext(ScrollContext)
 
   const handleTabChange = (id) => {
     startTransition(() => {
@@ -16,7 +20,7 @@ const AboutSection = () => {
   }
 
   return (
-    <section className="text-white ml">
+    <section ref={sectionRefs.about} className="text-white ml">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <Image src="/images/folio-about.jpg" width={600} height={500} alt='about image' />
         <div className='mt-4 md:mt-0 text-left flex flex-col h-full'>
