@@ -2,9 +2,12 @@
 import Image from 'next/image'
 import { TypeAnimation } from 'react-type-animation'
 import { motion } from 'framer-motion'
+import useWindowDimensions from '../hooks/useWindowDimension'
 
 
 const HeroSection = () => {
+ const { width } = useWindowDimensions()
+ console.log(width)
 
  return (
   <section>
@@ -41,13 +44,20 @@ const HeroSection = () => {
     </motion.div>
     <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} className="col-span-5 place-self-center mt-4 lg:mt-0">
      <div className='rounded-full bg-gradient-to-b from-green-200 via-green-300 to-blue-500 md:bottom-6 md:left-4 relative w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px]'>
-      <Image
-       className='absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 scale-110 sm:scale-125'
-       src="/images/folio-hero.png"
-       alt='hero image'
-       width={1200}
-       height={1600}
-      />
+      <motion.div initial={{ x: 0, y: width <= 425 ? 100 : 200 }} animate={{ x: [0, 20] }} transition={{
+       duration: 2,
+       repeat: Infinity,
+       // repeatDelay: 0.2,
+       repeatType: "reverse",
+      }}>
+       <Image
+        className='absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 scale-110 sm:scale-125'
+        src="/images/folio-hero.png"
+        alt='hero image'
+        width={1200}
+        height={1600}
+       />
+      </motion.div>
      </div>
     </motion.div>
    </div>

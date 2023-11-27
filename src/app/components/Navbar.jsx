@@ -5,6 +5,8 @@ import { useContext, useRef, useState } from 'react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
 import MenuOverlay from './MenuOverlay'
 import { ScrollContext } from '../page'
+import { motion, useTime, useTransform } from 'framer-motion'
+
 
 const navLinks = [
  {
@@ -24,7 +26,8 @@ const navLinks = [
 const Navbar = () => {
  const [navbarOpen, setNavbarOpen] = useState(false)
  const { handleClickToScroll, sectionRefs } = useContext(ScrollContext)
-
+ const time = useTime();
+ const rotate = useTransform(time, [0, 2500], [0, 360], { clamp: false });
 
 
  return (
@@ -32,9 +35,12 @@ const Navbar = () => {
    <div className='flex container flex-wrap items-center justify-between mx-auto px-4 py-2 lg:py-4'>
     <Link href={"/"} className='text-2xl md:text-5xl text-white font-semibold'>
      <div className='flex justify-center items-center gap-2'>
-      <svg className='w-14 sm:w-18' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
-       <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z" />
-      </svg>
+      {/* LOGO */}
+      <motion.div style={{ rotate }}>
+       <svg className='w-14 sm:w-18' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z" />
+       </svg>
+      </motion.div>
       <p className='text-base sm:text-xl'>Novodip Mondal</p>
      </div>
     </Link>
@@ -60,7 +66,7 @@ const Navbar = () => {
      </ul>
     </div>
    </div>
-   {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
+   {navbarOpen ? <MenuOverlay setNavbarOpen={setNavbarOpen} links={navLinks} /> : null}
   </nav>
  )
 }
