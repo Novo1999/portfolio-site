@@ -36,7 +36,7 @@ const HeroSection = () => {
       consequuntur cupiditate, laudantium neque illo, officiis
      </p>
      <div>
-      {/* Buttons */}
+      {/* Button */}
       <button className='px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-teal-500 via-blue-500 to-green-500 text-white bg-white hover:bg-slate-200 '>Hire Me</button>
 
       <button className='px-1 py-1 w-full sm:w-fit rounded-full bg-transparent bg-gradient-to-br from-blue-500 via-teal-500 to-green-500 hover:bg-slate-800 text-white border mt-3'><span className='block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2'>Download CV</span></button>
