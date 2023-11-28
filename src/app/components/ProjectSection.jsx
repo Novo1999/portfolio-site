@@ -37,7 +37,7 @@ const ProjectSection = () => {
         <ProjectTag onClick={handleTagChange} name="React" isSelected={tag === 'React'} />
         <ProjectTag onClick={handleTagChange} name="MERN" isSelected={tag === 'MERN'} />
       </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+      <ul ref={ref} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
         {filteredProjects.map((project, index) => {
           const { id, title, image, tag, description, gitUrl, previewUrl } = project
           return (
