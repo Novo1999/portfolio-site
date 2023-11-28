@@ -31,7 +31,8 @@ export const PROJECTS_DATA = [
   {
     id: 1,
     title: 'Gymba E-commerce Application',
-    description: 'Project 1 description',
+    description:
+      'E-commerce application built with MERN stack. User can add items to local cart or online cart based on if they are logged in or not. ',
     image: '/images/projects/Gymba.png',
     tag: ['All', 'MERN'],
     gitUrl: [
@@ -44,7 +45,8 @@ export const PROJECTS_DATA = [
   {
     id: 2,
     title: 'Kanban Board Application',
-    description: 'Project 2 description',
+    description:
+      'Kanban Board Application built with MERN stack. User can create boards, add tasks, subtasks and edit them.',
     image: '/images/projects/Kanban.png',
     tag: ['All', 'MERN'],
     gitUrl: [
