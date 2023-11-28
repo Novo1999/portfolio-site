@@ -28,8 +28,7 @@ const HeroSection = () => {
        repeat={Infinity}
       /></h1>
      <p className='text-gray text-base sm:text-lg lg:text-xl md:mt-20 mb-6'>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam rerum
-      consequuntur cupiditate, laudantium neque illo, officiis
+      Passionate and Aspiring Web Developer based in Bangladesh on a journey to turn creative visions into interactive digital realities.
      </p>
      <div>
       {/* Button */}

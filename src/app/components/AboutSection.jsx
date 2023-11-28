@@ -25,7 +25,7 @@ const AboutSection = () => {
         <Image src="/images/folio-about.jpg" width={600} height={500} alt='about image' />
         <div className='mt-4 md:mt-0 text-left flex flex-col h-full'>
           <h2 className='text-4xl font-bold text-white mb-4'>About Me</h2>
-          <p className='text-base lg:text-lg'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non optio ipsa magni recusandae ut in repellendus cumque laudantium! Accusamus rem eaque culpa nihil voluptatem ipsam facilis voluptate delectus in itaque vitae, libero et optio id dicta aliquam temporibus est nam!</p>
+          <p className='text-base lg:text-lg'>Enthusiastic and aspiring web developer who is proficient in building user interfaces with React and also creating full stack web application with React, Node.js Express and MongoDB.  I thrive on challenges and view each project as a chance to enhance my skills and contribute to innovative solutions. Eager to apply my knowledge in a real-world setting, I am passionate about creating engaging and responsive user interfaces that provides an intuitive experience to the end users.</p>
           <div className="flex flex-row justify-start mt-8">
             {TABS.map((tabName, index) =>
               <TabButton key={index} selectTab={() => handleTabChange(tabName)} active={tab === tabName} >

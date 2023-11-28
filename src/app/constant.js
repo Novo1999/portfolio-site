@@ -50,4 +50,13 @@ export const PROJECTS_DATA = [
     gitUrl: '/',
     previewUrl: '/',
   },
+  {
+    id: 3,
+    title: 'Kanban Board Application',
+    description: 'Project 2 description',
+    image: '/images/projects/Kanban.png',
+    tag: ['All', 'MERN'],
+    gitUrl: '/',
+    previewUrl: '/',
+  },
 ]
