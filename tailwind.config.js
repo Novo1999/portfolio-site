@@ -12,7 +12,23 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      keyframes: {
+        floatX: {
+          '0%': {
+            transform: 'translateX(0px)',
+          },
+          '50%': {
+            transform: 'translateX(-20px)',
+          },
+          '100%': {
+            transform: 'translateX(0px)',
+          },
+        },
+      },
+      animation: {
+        'float-x': 'floatX 3s linear infinite',
+      },
     },
   },
-  plugins: [],
+  plugins: [require('daisyui')],
 }

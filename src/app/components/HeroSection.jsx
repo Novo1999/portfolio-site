@@ -39,14 +39,14 @@ const HeroSection = () => {
      </div>
     </motion.div>
     <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} className="col-span-5 place-self-center mt-4 lg:mt-0">
-     <div className='rounded-full bg-gradient-to-b from-green-200 via-green-300 to-blue-500 md:bottom-6 md:left-4 relative w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px]'>
+     <div className='rounded-full bg-gradient-to-b from-green-200 via-green-300 to-blue-500 md:bottom-6 md:left-4 relative w-[200px] h-[200px] min-[425px]:w-[300px] min-[425px]:h-[300px] lg:w-[400px] lg:h-[400px]'>
 
       <Image
-       className='absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 scale-110 sm:scale-125'
+       className='absolute animate-float-x left-6 right-0 top-0 bottom-0 m-auto object-cover h-[20rem] min-[425px]:h-[32rem] lg:h-[42rem] transform-gpu'
        src="/images/folio-hero.png"
        alt='hero image'
-       width={1200}
-       height={1600}
+       width={400}
+       height={400}
       />
 
      </div>

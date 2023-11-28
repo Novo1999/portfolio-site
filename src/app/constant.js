@@ -34,7 +34,11 @@ export const PROJECTS_DATA = [
     description: 'Project 1 description',
     image: '/images/projects/Gymba.png',
     tag: ['All', 'MERN'],
-    gitUrl: '/',
+    gitUrl: [
+      'https://github.com/Novo1999/Gymba',
+      'https://github.com/Novo1999/Ecommerce-Backend-main',
+    ],
+
     previewUrl: '/',
   },
   {

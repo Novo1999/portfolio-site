@@ -1,7 +1,7 @@
 "use client"
 import Link from 'next/link'
 import NavLink from './NavLink'
-import { useContext, useRef, useState } from 'react'
+import { useContext, useState } from 'react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
 import MenuOverlay from './MenuOverlay'
 import { ScrollContext } from '../page'

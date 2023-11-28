@@ -46,15 +46,16 @@ const EmailSection = () => {
      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit sit voluptas facilis rerum vitae eos velit culpa porro quas explicabo.
     </p>
     <div className="socials flex flex-row gap-2">
-     <Link href="github.com">
-      <Image className="bg-gray-300 w-10 rounded-full" src={GithubIcon} alt="github icon" />
+     <Link target="blank" href="https://github.com/Novo1999">
+      <Image className="bg-gray-300 w-10 rounded-full hover:bg-white transition-colors duration-300" src={GithubIcon} alt="github icon" />
      </Link>
-     <Link href="facebook.com">
-      <Image className="bg-gray-300 w-10 rounded-full" src={FacebookIcon} alt="github icon" />
+     <Link target="blank" href="https://www.facebook.com/Novodipp/">
+      <Image className="bg-gray-300 w-10 rounded-full hover:bg-blue-500 transition-colors duration-300" src={FacebookIcon} alt="github icon" />
      </Link>
     </div>
    </div>
    <div>
+
     <form className="flex flex-col">
      <div className="mb-6">
       <label htmlFor="email" className="text-white block mb-2 text-sm font-medium">Your Email</label>
@@ -65,10 +66,12 @@ const EmailSection = () => {
       <label htmlFor="subject" className="text-white mb-2 block text-sm font-medium">Subject</label>
       <input name="subject" className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5" type="text" id="email" required placeholder="Just Saying Hi" />
      </div>
+
      <div className="mb-6">
       <label htmlFor="message" className="text-white block text-sm mb-2 font-medium">Message</label>
       <textarea name="message" id="message" className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5" placeholder="Let's talk about..."></textarea>
      </div>
+
     </form>
     <button type="submit" className="bg-green-500 hover:bg-green-600 text-white font-medium py-2.5 px-5 rounded-lg w-full">Send Message</button>
    </div>
