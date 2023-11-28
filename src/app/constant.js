@@ -39,7 +39,7 @@ export const PROJECTS_DATA = [
       'https://github.com/Novo1999/Ecommerce-Backend-main',
     ],
 
-    previewUrl: '/',
+    previewUrl: 'https://gymba.vercel.app/',
   },
   {
     id: 2,
@@ -47,7 +47,10 @@ export const PROJECTS_DATA = [
     description: 'Project 2 description',
     image: '/images/projects/Kanban.png',
     tag: ['All', 'MERN'],
-    gitUrl: '/',
-    previewUrl: '/',
+    gitUrl: [
+      'https://github.com/Novo1999/Kanban-Frontend',
+      'https://github.com/Novo1999/kanban-task-management-main',
+    ],
+    previewUrl: 'https://kanban-novo.netlify.app/',
   },
 ]
