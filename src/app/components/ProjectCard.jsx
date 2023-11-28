@@ -1,3 +1,4 @@
+"use client"
 import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline"
 import { useMediaQuery } from "@uidotdev/usehooks";
 import Link from 'next/link'
