@@ -6,7 +6,7 @@ import Link from 'next/link'
 const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
  return (
   <div>
-   <div className="h-[14rem] md:h-[15rem] lg:h-[12rem] xl:h-[20rem] relative rounded-t-xl group" style={{ background: `url(${imgUrl})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat' }}>
+   <div className="h-[14rem] md:h-[15rem] lg:h-[12rem] xl:h-[20rem] 2xl:h-[24rem] relative rounded-t-xl group" style={{ background: `url(${imgUrl})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat' }}>
     <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500">
      <Link target="blank" href={`${gitUrl[0]}`} className="h-14 w-14 mr-2 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link">
       <CodeBracketIcon className="h-10 w-10 text-[#ADB7BE] absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 cursor-pointer hover:text-white group-hover/link:text-white" />
