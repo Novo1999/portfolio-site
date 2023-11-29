@@ -36,11 +36,11 @@ const HeroSection = () => {
       {/* Button */}
       <button onClick={(e) => handleClickToScroll(e, sectionRefs['contact'])} className='px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-teal-500 via-blue-500 to-green-500 text-white bg-white hover:bg-slate-200 '>Hire Me</button>
 
-      <button className='px-1 py-1 w-full relative z-10 sm:w-fit rounded-full bg-transparent bg-gradient-to-br from-blue-500 via-teal-500 to-green-500 hover:bg-slate-800 text-white border mt-3'><a href='Novo-CV.pdf' className='block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2' download>Download CV</a></button>
+      <button className='px-1 py-1 w-full relative z-10 sm:w-fit rounded-full bg-transparent bg-gradient-to-br from-blue-500 via-teal-500 to-green-600 hover:bg-slate-800 text-white border mt-3'><a href='Novo-CV.pdf' className='block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2' download>Download CV</a></button>
      </div>
     </motion.div>
     <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} className="col-span-5 place-self-center mt-4 lg:mt-0">
-     <div className='rounded-full bg-gradient-to-b from-green-200 via-green-300 to-blue-500 md:bottom-6 md:left-4 relative w-[200px] h-[200px] min-[425px]:w-[300px] min-[425px]:h-[300px] lg:w-[400px] lg:h-[400px]'>
+     <div className='rounded-full bg-gradient-to-b from-green-500 via-green-300 to-blue-500 md:bottom-6 md:left-4 relative w-[200px] h-[200px] min-[425px]:w-[300px] min-[425px]:h-[300px] lg:w-[400px] lg:h-[400px]'>
       <Image
        className='absolute animate-float-x left-6 right-0 top-0 bottom-0 m-auto object-cover h-[20rem] min-[425px]:h-[32rem] lg:h-[42rem] z-0 transform-gpu'
        src="/images/folio-hero.png"

@@ -6,7 +6,7 @@ const variants = {
 }
 
 const TabButton = ({ active, selectTab, children }) => {
- const buttonClasses = active ? "text-white" : 'text-[#ADB&BE]'
+ const buttonClasses = active ? "text-white" : 'text-gray-400'
  return (
   <button onClick={selectTab}>
    <p className={`mr-3 font-semibold hover:text-white capitalize ${buttonClasses}`}>
