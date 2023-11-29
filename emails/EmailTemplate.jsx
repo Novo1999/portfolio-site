@@ -3,13 +3,14 @@ import { Text } from "@react-email/text";
 import { Section } from "@react-email/section";
 import { Container } from "@react-email/container";
 
-export default function WelcomeEmail() {
+export default function WelcomeEmail(email, subject, message,) {
  return (
   <Html>
    <Section style={main}>
     <Container style={container}>
-     <Text style={heading}>Hi there!</Text>
-     <Text style={paragraph}>Welcome to our app!</Text>
+     <Text style={heading}>You have a mail from {email}</Text>
+     <Text style={paragraph}>{subject}</Text>
+     <Text style={paragraph}>{message}</Text>
     </Container>
    </Section>
   </Html>
@@ -28,7 +29,7 @@ const container = {
 };
 
 const heading = {
- fontSize: "32px",
+ fontSize: "20px",
  lineHeight: "1.3",
  fontWeight: "700",
  color: "#484848",

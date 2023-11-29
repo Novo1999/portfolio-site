@@ -53,6 +53,6 @@ export const PROJECTS_DATA = [
       'https://github.com/Novo1999/Kanban-Frontend',
       'https://github.com/Novo1999/kanban-task-management-main',
     ],
-    previewUrl: 'https://kanban-novo.netlify.app/',
+    previewUrl: 'https://kanban-novo-frontend.vercel.app/',
   },
 ]

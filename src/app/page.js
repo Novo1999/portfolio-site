@@ -6,7 +6,7 @@ import ProjectSection from './components/ProjectSection'
 import EmailSection from './components/EmailSection'
 import Footer from './components/Footer'
 import { createContext, useRef } from 'react'
-
+import { Toaster } from 'react-hot-toast'
 export const ScrollContext = createContext(null)
 
 export default function Home() {
@@ -27,6 +27,7 @@ export default function Home() {
   return (
     <ScrollContext.Provider value={{ sectionRefs, handleClickToScroll }}>
       <main className='flex min-h-screen flex-col bg-black'>
+        <Toaster />
         <Navbar />
         <div className='container mx-auto mt-24 px-12 py-4'>
           <HeroSection />

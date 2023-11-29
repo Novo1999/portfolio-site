@@ -5,37 +5,32 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useContext } from "react"
 import { ScrollContext } from "../page"
+import { useForm } from "react-hook-form"
+import axios from 'axios'
+import toast from 'react-hot-toast'
+
+
+const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g
 
 
 const EmailSection = () => {
  const { sectionRefs } = useContext(ScrollContext)
-
- // const [emailSubmitted, setEmailSubmitted] = useState(false)
- // const handleSubmit = async (e) => {
- //  e.preventDefault()
- //  const data = {
- //   email: e.target.email.value,
- //   subject: e.target.subject.value,
- //   message: e.target.message.value,
- //  };
- //  const JSONdata = JSON.stringify(data)
- //  const endpoint = "/api/send"
-
-
- //  const options = {
- //   method: "POST",
- //   headers: {
- //    "Content-Type": "application/json",
- //   },
- //   body: JSONdata,
- //  };
-
- //  const response = await fetch(endpoint, options)
- //  const resData = await response.json()
- //  if (response.status === 200) {
- //   setEmailSubmitted(true)
- //  }
- // };
+ const {
+  register,
+  handleSubmit,
+  watch,
+  formState
+ } = useForm()
+ let toastId
+ const onSubmit = async (data) => {
+  try {
+   toastId = toast.loading('Delivering the message ✉ with a bird 🐦')
+   await axios.post(`https://novodip.vercel.app/api/email`, data)
+   return toast.success('The bird 🐦 sent the message ✉ safely', { id: toastId })
+  } catch (error) {
+   return toast.error('The bird 🐦 got struck by lightning ⚡ while delivering the message ✉', { id: toastId })
+  }
+ }
 
  return (
   <section ref={sectionRefs.contact} className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative">
@@ -56,30 +51,35 @@ const EmailSection = () => {
    </div>
    <div>
 
-    <form className="flex flex-col">
+    <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col">
      <div className="mb-6">
       <label htmlFor="email" className="text-white block mb-2 text-sm font-medium">Your Email</label>
-      <input name="email" className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5" type="email" id="email" required placeholder="sam@gmail.com" />
+      <input {...register('email', {
+       required: true, pattern: emailRegex
+      })} name="email" className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5" type="email" id="email" placeholder="sam@gmail.com" />
+      {formState.errors.email && formState.errors.email.type === "required" && (
+       <span className="text-red-500 ml-1 text-sm">This is required</span>
+      )}
+      {formState.errors.email && formState.errors.email.type === "pattern" && (
+       <span className="text-red-500 ml-1 text-sm">Invalid Email</span>
+      )}
      </div>
 
      <div className="mb-6">
       <label htmlFor="subject" className="text-white mb-2 block text-sm font-medium">Subject</label>
-      <input name="subject" className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5" type="text" id="email" required placeholder="Just Saying Hi" />
+      <input {...register('subject')} name="subject" className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5" type="text" id="email" placeholder="Just Saying Hi" />
      </div>
 
      <div className="mb-6">
       <label htmlFor="message" className="text-white block text-sm mb-2 font-medium">Message</label>
-      <textarea name="message" id="message" className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5" placeholder="Let's talk about..."></textarea>
+      <textarea {...register('message', { required: true })} name="message" id="message" className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5" placeholder="Let's talk about..."></textarea>
+      {formState.errors.message && formState.errors.message.type === "required" && (
+       <span className="text-red-500 ml-1 text-sm">This is required</span>
+      )}
      </div>
-
+     <button disabled={formState.isSubmitting} type="submit" className={`${formState.isSubmitting ? 'bg-gray-500 hover:bg-gray-500' : 'bg-green-500 hover:bg-green-600'} hover:bg-green-600 text-white font-medium py-2.5 px-5 rounded-lg w-full`}>{formState.isSubmitting ? 'Sending' : 'Send Message'}</button>
     </form>
-    <button type="submit" className="bg-green-500 hover:bg-green-600 text-white font-medium py-2.5 px-5 rounded-lg w-full">Send Message</button>
    </div>
-   {
-    // emailSubmitted && (
-    //  <p className="text-green-500 text-sm mt-2">Email sent successfully!</p>
-    // )
-   }
   </section>
  )
 }
