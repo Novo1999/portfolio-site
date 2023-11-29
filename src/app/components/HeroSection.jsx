@@ -17,7 +17,7 @@ const HeroSection = () => {
       <TypeAnimation
        sequence={[
         'Novo',
-        1000, // wait 1s before replacing "Mice" with "Hamsters"
+        1000,
         'Web Developer',
         1000,
         'MERN Developer',
@@ -36,7 +36,7 @@ const HeroSection = () => {
       {/* Button */}
       <button onClick={(e) => handleClickToScroll(e, sectionRefs['contact'])} className='px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-teal-500 via-blue-500 to-green-500 text-white bg-white hover:bg-slate-200 '>Hire Me</button>
 
-      <button className='px-1 py-1 w-full relative z-10 sm:w-fit rounded-full bg-transparent bg-gradient-to-br from-blue-500 via-teal-500 to-green-600 hover:bg-slate-800 text-white border mt-3'><a href='Novo-CV.pdf' className='block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2' download>Download CV</a></button>
+      <button className='px-1 py-1 w-full relative sm:w-fit rounded-full bg-transparent bg-gradient-to-br from-blue-500 via-teal-500 to-green-600 hover:bg-slate-800 text-white border mt-3'><a href='Novo-CV.pdf' className='block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2' download>Download CV</a></button>
      </div>
     </motion.div>
     <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} className="col-span-5 place-self-center mt-4 lg:mt-0">
