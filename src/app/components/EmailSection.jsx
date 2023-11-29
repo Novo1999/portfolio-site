@@ -19,13 +19,14 @@ const EmailSection = () => {
   register,
   handleSubmit,
   watch,
-  formState
+  formState, reset
  } = useForm()
  let toastId
  const onSubmit = async (data) => {
   try {
    toastId = toast.loading('Delivering the message ✉ with a bird 🐦')
    await axios.post(`https://novodip.vercel.app/api/email`, data)
+   reset()
    return toast.success('The bird 🐦 sent the message ✉ safely', { id: toastId })
   } catch (error) {
    return toast.error('The bird 🐦 got struck by lightning ⚡ while delivering the message ✉', { id: toastId })
