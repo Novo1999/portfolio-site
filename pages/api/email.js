@@ -2,7 +2,6 @@ import { render } from '@react-email/render'
 import WelcomeTemplate from '../../emails/EmailTemplate'
 import nodemailer from 'nodemailer'
 
-// Replace with your SMTP credentials
 const smtpOptions = {
   host: process.env.SMTP_HOST || 'smtp.mailtrap.io',
   port: parseInt(process.env.SMTP_PORT || '2525'),
