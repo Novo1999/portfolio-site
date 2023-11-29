@@ -39,7 +39,7 @@ const EmailSection = () => {
    <div className="z-0">
     <h5 className="text-xl font-bold text-white my-2">Let&apos;s Connect</h5>
     <p className="text-[#ADB7BE] mb-4 max-w-md">
-     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit sit voluptas facilis rerum vitae eos velit culpa porro quas explicabo.
+     Thank you ✨ for checking out my portfolio. If you have anything in mind, just send me a message with your email or contact me through the facebook link.
     </p>
     <div className="socials flex flex-row gap-2">
      <Link target="blank" href="https://github.com/Novo1999">
