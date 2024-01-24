@@ -34,7 +34,7 @@ export const PROJECTS_DATA = [
     description:
       'E-commerce application built with MERN stack. User can add items to local cart or online cart based on if they are logged in or not. ',
     image: '/images/projects/Gymba.png',
-    tag: ['All', 'MERN'],
+    tag: ['All', 'React', 'MERN'],
     gitUrl: [
       'https://github.com/Novo1999/Gymba',
       'https://github.com/Novo1999/Ecommerce-Backend-main',
@@ -46,13 +46,26 @@ export const PROJECTS_DATA = [
     id: 2,
     title: 'Kanban Board Application',
     description:
-      'Kanban Board Application built with MERN stack. User can create boards, add tasks, subtasks and edit them.',
+      'Kanban Board Application built with MERN stack. User can create boards, add tasks, subtasks and edit them. They can also drag and drop which has been implemented using react dnd',
     image: '/images/projects/Kanban.png',
-    tag: ['All', 'MERN'],
+    tag: ['All', 'React', 'MERN'],
     gitUrl: [
       'https://github.com/Novo1999/Kanban-Frontend',
       'https://github.com/Novo1999/kanban-task-management-main',
     ],
     previewUrl: 'https://kanban-novo-frontend.vercel.app/',
+  },
+  {
+    id: 3,
+    title: 'Invoicer',
+    description:
+      'Invoicer application built with MERN and state managed with redux toolkit. User can create, read, update, delete invoices and drag to reorder them which has been implemented using framer motion',
+    image: '/images/projects/invoices_ss.png',
+    tag: ['All', 'React', 'MERN'],
+    gitUrl: [
+      'https://github.com/Novo1999/Invoices-frontend',
+      'https://github.com/Novo1999/Invoices-backend',
+    ],
+    previewUrl: 'https://invoices-novo.vercel.app/',
   },
 ]
