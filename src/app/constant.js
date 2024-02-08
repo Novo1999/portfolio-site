@@ -5,12 +5,15 @@ export const TAB_DATA = [
     content: (
       <ul className='list-disc pl-2 grid grid-cols-1 sm:grid-cols-2'>
         <li>Javascript</li>
+        <li>TypeScript</li>
         <li>React</li>
         <li>Node.js</li>
         <li>MongoDB</li>
         <li>Express</li>
         <li>Tailwind CSS</li>
         <li>Redux, Redux Toolkit</li>
+        <li>React Query</li>
+        <li>Framer</li>
       </ul>
     ),
   },
