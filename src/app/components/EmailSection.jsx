@@ -10,6 +10,7 @@ import FacebookIcon from '../../../public/images/icons/FacebookIcon.svg'
 import GithubIcon from '../../../public/images/icons/GithubIcon.svg'
 import { ScrollContext } from '../page'
 
+// eslint-disable-next-line no-useless-escape
 const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g
 
 const EmailSection = () => {
