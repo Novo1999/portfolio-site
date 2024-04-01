@@ -7,6 +7,7 @@ export const TAB_DATA = [
         <li>Javascript</li>
         <li>TypeScript</li>
         <li>React</li>
+        <li>Next.js</li>
         <li>Node.js</li>
         <li>MongoDB</li>
         <li>Express</li>
@@ -34,7 +35,21 @@ export const TABS = ['skills', 'education']
 export const PROJECTS_DATA = [
   {
     id: 1,
-    title: 'Gymba E-commerce Application',
+    title: 'Remote jumbo',
+    description:
+      'Remote jumbo is a complete solution of remote job circulars, Admin dashboard is lets the admin view the overall job status. User can post, edit, delete, star jobs. Animation works are added with framer and much more exciting features.',
+    image: '/images/projects/RemoteJumbo.png',
+    tag: ['All', 'React', 'Next.js', 'MERN'],
+    gitUrl: [
+      'https://github.com/Novo1999/Remote-Job',
+      'https://github.com/Novo1999/RemoteJumbo---Backend',
+    ],
+
+    previewUrl: 'https://remotejumbo.vercel.app/',
+  },
+  {
+    id: 2,
+    title: 'Gymba',
     description:
       'E-commerce application built with MERN stack. User can add items to local cart or online cart based on if they are logged in or not. ',
     image: '/images/projects/Gymba.png',
@@ -47,7 +62,7 @@ export const PROJECTS_DATA = [
     previewUrl: 'https://gymba.vercel.app/',
   },
   {
-    id: 2,
+    id: 3,
     title: 'Kanban Board Application',
     description:
       'Kanban Board Application built with MERN stack. User can create boards, add tasks, subtasks and edit them. They can also drag and drop which has been implemented using react dnd',
@@ -60,7 +75,7 @@ export const PROJECTS_DATA = [
     previewUrl: 'https://kanban-novo-frontend.vercel.app/',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Invoicer',
     description:
       'Invoicer application built with MERN and state managed with redux toolkit. User can create, read, update, delete invoices and drag to reorder them which has been implemented using framer motion',

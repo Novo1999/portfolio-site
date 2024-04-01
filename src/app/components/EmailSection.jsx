@@ -1,15 +1,14 @@
 'use client'
-import GithubIcon from '../../../public/images/icons/GithubIcon.svg'
-import FacebookIcon from '../../../public/images/icons/FacebookIcon.svg'
-import Link from 'next/link'
-import Image from 'next/image'
-import { useContext } from 'react'
-import { ScrollContext } from '../page'
-import { useForm } from 'react-hook-form'
-import axios from 'axios'
-import toast from 'react-hot-toast'
-import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
+import axios from 'axios'
+import Image from 'next/image'
+import Link from 'next/link'
+import { useContext, useRef } from 'react'
+import { useForm } from 'react-hook-form'
+import toast from 'react-hot-toast'
+import FacebookIcon from '../../../public/images/icons/FacebookIcon.svg'
+import GithubIcon from '../../../public/images/icons/GithubIcon.svg'
+import { ScrollContext } from '../page'
 
 const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g
 
@@ -56,14 +55,22 @@ const EmailSection = () => {
           facebook link.
         </p>
         <div className='socials flex flex-row gap-2'>
-          <Link target='blank' href='https://github.com/Novo1999'>
+          <Link
+            className='cursor-none'
+            target='blank'
+            href='https://github.com/Novo1999'
+          >
             <Image
               className='bg-gray-300 w-10 rounded-full hover:bg-white transition-colors duration-300'
               src={GithubIcon}
               alt='github icon'
             />
           </Link>
-          <Link target='blank' href='https://www.facebook.com/Novodipp/'>
+          <Link
+            className='cursor-none'
+            target='blank'
+            href='https://www.facebook.com/Novodipp/'
+          >
             <Image
               className='bg-gray-300 w-10 rounded-full hover:bg-blue-500 transition-colors duration-300'
               src={FacebookIcon}

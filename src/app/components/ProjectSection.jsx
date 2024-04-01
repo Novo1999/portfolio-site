@@ -1,10 +1,10 @@
 'use client'
-import { useState, useRef, useContext } from 'react'
+import { motion, useInView } from 'framer-motion'
+import { useContext, useRef, useState } from 'react'
 import { PROJECTS_DATA } from '../constant'
+import { ScrollContext } from '../page'
 import ProjectCard from './ProjectCard'
 import ProjectTag from './ProjectTag'
-import { motion, useInView } from 'framer-motion'
-import { ScrollContext } from '../page'
 
 const ProjectSection = () => {
   const [tag, setTag] = useState('All')
@@ -43,6 +43,11 @@ const ProjectSection = () => {
         />
         <ProjectTag
           onClick={handleTagChange}
+          name='Next.js'
+          isSelected={tag === 'Next.js'}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
           name='MERN'
           isSelected={tag === 'MERN'}
         />
@@ -52,24 +57,15 @@ const ProjectSection = () => {
         className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12'
       >
         {filteredProjects.map((project, index) => {
-          const { id, title, image, tag, description, gitUrl, previewUrl } =
-            project
           return (
             <motion.li
               variants={cardVariants}
               initial='initial'
               animate={isInView ? 'animate' : 'initial'}
               transition={{ duration: 0.3, delay: index * 0.4 }}
-              key={id}
+              key={project.id}
             >
-              <ProjectCard
-                title={title}
-                description={description}
-                imgUrl={image}
-                tags={tag}
-                gitUrl={gitUrl}
-                previewUrl={previewUrl}
-              />
+              <ProjectCard project={project} />
             </motion.li>
           )
         })}
