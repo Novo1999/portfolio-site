@@ -25,7 +25,7 @@ const ProjectCard = ({ project }) => {
             className='tooltip h-14 w-14 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link'
             data-tip='Client'
           >
-            <Link target='blank' href={`${gitUrl[0]}`}>
+            <Link className='p-4' target='blank' href={`${gitUrl[0]}`}>
               <ComputerDesktopIcon className='h-10 w-10 text-[#ADB7BE] absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 cursor-none hover:text-white group-hover/link:text-white' />
             </Link>
           </div>
@@ -33,7 +33,12 @@ const ProjectCard = ({ project }) => {
             className='tooltip h-14 w-14 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link'
             data-tip='Server'
           >
-            <Link target='blank' data-tip='Server' href={`${gitUrl[1]}`}>
+            <Link
+              className='p-4'
+              target='blank'
+              data-tip='Server'
+              href={`${gitUrl[1]}`}
+            >
               <GlobeAltIcon className='tooltip h-10 w-10 text-[#ADB7BE] absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 cursor-none hover:text-white group-hover/link:text-white' />
             </Link>
           </div>
@@ -41,7 +46,7 @@ const ProjectCard = ({ project }) => {
             className='tooltip h-14 w-14 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link'
             data-tip='Live'
           >
-            <Link target='blank' href={previewUrl}>
+            <Link className='p-4' target='blank' href={previewUrl}>
               <EyeIcon className='h-10 w-10 text-[#ADB7BE] absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 cursor-none hover:text-white group-hover/link:text-white' />
             </Link>
           </div>
