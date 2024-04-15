@@ -29,7 +29,7 @@ const Navbar = () => {
   const rotate = useTransform(time, [0, 2500], [0, 360], { clamp: false })
 
   return (
-    <nav className='fixed top-0 left-0 right-0 z-30 bg-black bg-opacity-100'>
+    <nav className='fixed top-0 left-0 right-0 z-30 bg-slate-900 bg-opacity-100'>
       <div className='flex container *:cursor-none flex-wrap items-center justify-between mx-auto px-4 py-2 lg:py-4'>
         <Link
           href={'/'}
@@ -78,7 +78,10 @@ const Navbar = () => {
             {navLinks.map((link, index) => {
               const { title, path } = link
               return (
-                <li key={index}>
+                <li
+                  className='hover:underline underline-offset-8 p-4'
+                  key={index}
+                >
                   <NavLink
                     onClick={(e) =>
                       handleClickToScroll(e, sectionRefs[link.path])

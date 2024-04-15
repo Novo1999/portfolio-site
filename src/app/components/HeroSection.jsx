@@ -27,7 +27,7 @@ const HeroSection = () => {
               sequence={[
                 'Novo',
                 1000,
-                'Web Developer',
+                'Frontend Developer',
                 1000,
                 'MERN Developer',
                 1000,
@@ -40,8 +40,8 @@ const HeroSection = () => {
             />
           </h1>
           <p className='text-gray text-base sm:text-lg lg:text-xl md:mt-20 mb-6'>
-            Passionate and Aspiring Web Developer based in Bangladesh on a
-            journey to turn creative visions into interactive digital realities.
+            A Frontend focused developer who can also build backends using
+            express
           </p>
           <div>
             {/* Button */}

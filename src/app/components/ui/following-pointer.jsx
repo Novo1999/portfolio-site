@@ -1,5 +1,3 @@
-// Core component that receives mouse positions and renders pointer and content
-
 import React, { useEffect, useState } from 'react'
 
 import { cn } from '@/utils/cn.js'
@@ -10,7 +8,7 @@ export const FollowerPointerCard = ({ children, className, title }) => {
   const y = useMotionValue(0)
   const ref = React.useRef(null)
   const [rect, setRect] = useState(null)
-  const [isInside, setIsInside] = useState(true) // Add this line
+  const [isInside, setIsInside] = useState(true)
 
   useEffect(() => {
     if (ref.current) {
@@ -55,7 +53,6 @@ export const FollowerPointerCard = ({ children, className, title }) => {
 export const FollowPointer = ({ x, y, title }) => {
   const colors = [
     'var(--sky-500)',
-    'var(--neutral-500)',
     'var(--teal-500)',
     'var(--green-500)',
     'var(---500)',
@@ -112,7 +109,7 @@ export const FollowPointer = ({ x, y, title }) => {
           opacity: 0,
         }}
         className={
-          'px-2 py-2 bg-neutral-200 text-white whitespace-nowrap min-w-max text-xs rounded-full'
+          'px-2 py-2 bg-neutral-200 text-white whitespace-nowrap min-w-max text-xs relative bottom-2 rounded-full'
         }
       >
         {title}

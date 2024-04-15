@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <ScrollContext.Provider value={{ sectionRefs, handleClickToScroll }}>
       <FollowerPointerCard>
-        <main className='flex min-h-screen flex-col bg-black'>
+        <main className='flex min-h-screen flex-col bg-slate-900'>
           <Toaster />
           <Navbar />
           <TracingBeam className='container mx-auto mt-24 px-12 py-4'>

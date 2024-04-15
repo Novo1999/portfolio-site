@@ -3,11 +3,13 @@ import {
   EyeIcon,
   GlobeAltIcon,
 } from '@heroicons/react/24/outline'
+import Image from 'next/image.js'
 import Link from 'next/link'
 import { BackgroundGradient } from './ui/bg-gradients.jsx'
 
 const ProjectCard = ({ project }) => {
   const { id, title, image, tag, description, gitUrl, previewUrl } = project
+
   return (
     <BackgroundGradient className='z-20'>
       <div
@@ -48,6 +50,49 @@ const ProjectCard = ({ project }) => {
       <div className='text-white rounded-b-3xl bg-[#181818] py-6 relative bottom-20 min-[375px]:bottom-9 lg:bottom-4 xl:bottom-0 px-4'>
         <h5 className='font-xl font-semibold mb-2'>{title}</h5>
         <p className='text-[#ADB7BE]'>{description}</p>
+        {/* tech */}
+        <div className='mt-4 flex items-center gap-2'>
+          {tag.includes('Next.js') && (
+            <Image
+              className='w-12 scale-150'
+              src='/images/icons/nextjs.png'
+              width={300}
+              height={300}
+              alt='tech'
+            />
+          )}
+
+          {!tag.includes('Next.js') && (
+            <Image
+              className='w-12'
+              src='/images/icons/react.png'
+              width={200}
+              height={200}
+              alt='tech'
+            />
+          )}
+          <Image
+            className='w-12'
+            src='/images/icons/tailwind.png'
+            width={200}
+            height={200}
+            alt='tech'
+          />
+          <Image
+            className='w-12'
+            src='/images/icons/express.png'
+            width={200}
+            height={200}
+            alt='tech'
+          />
+          <Image
+            className='w-12'
+            src='/images/icons/mongodb.png'
+            width={200}
+            height={200}
+            alt='tech'
+          />
+        </div>
       </div>
     </BackgroundGradient>
   )

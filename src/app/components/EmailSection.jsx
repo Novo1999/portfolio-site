@@ -1,6 +1,5 @@
 'use client'
 import emailjs from '@emailjs/browser'
-import axios from 'axios'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useContext, useRef } from 'react'
