@@ -49,6 +49,16 @@ export const PROJECTS_DATA = [
   },
   {
     id: 2,
+    title: 'Kartigo',
+    description:
+      'FullStack Next.JS E-commerce Platform including admin dashboard with advanced features like forgot password and cron cart clearance.',
+    image: '/images/projects/kartigo.png',
+    tag: ['All', 'React', 'Next.js'],
+    gitUrl: ['https://github.com/Novo1999/kartigo-nextt'],
+    previewUrl: 'https://kartigo.vercel.app/',
+  },
+  {
+    id: 3,
     title: 'Gymba',
     description:
       'E-commerce application built with MERN stack. User can add items to local cart or online cart based on if they are logged in or not. ',
@@ -62,7 +72,7 @@ export const PROJECTS_DATA = [
     previewUrl: 'https://gymba.vercel.app/',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Kanban Board Application',
     description:
       'Kanban Board Application built with MERN stack. User can create boards, add tasks, subtasks and edit them. They can also drag and drop which has been implemented using react dnd',
@@ -75,7 +85,7 @@ export const PROJECTS_DATA = [
     previewUrl: 'https://kanban-novo-frontend.vercel.app/',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Invoicer',
     description:
       'Invoicer application built with MERN and state managed with redux toolkit. User can create, read, update, delete invoices and drag to reorder them which has been implemented using framer motion',

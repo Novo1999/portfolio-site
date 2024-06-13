@@ -76,27 +76,31 @@ const ProjectCard = ({ project }) => {
               alt='tech'
             />
           )}
-          <Image
-            className='w-12'
-            src='/images/icons/tailwind.png'
-            width={200}
-            height={200}
-            alt='tech'
-          />
-          <Image
-            className='w-12'
-            src='/images/icons/express.png'
-            width={200}
-            height={200}
-            alt='tech'
-          />
-          <Image
-            className='w-12'
-            src='/images/icons/mongodb.png'
-            width={200}
-            height={200}
-            alt='tech'
-          />
+          {title !== 'Kartigo' && (
+            <>
+              <Image
+                className='w-12'
+                src='/images/icons/tailwind.png'
+                width={200}
+                height={200}
+                alt='tech'
+              />
+              <Image
+                className='w-12'
+                src='/images/icons/express.png'
+                width={200}
+                height={200}
+                alt='tech'
+              />
+              <Image
+                className='w-12'
+                src='/images/icons/mongodb.png'
+                width={200}
+                height={200}
+                alt='tech'
+              />
+            </>
+          )}
         </div>
       </div>
     </BackgroundGradient>
