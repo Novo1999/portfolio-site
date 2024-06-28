@@ -33,6 +33,7 @@ const HeroSection = () => {
                 1000,
                 'React Developer',
                 1000,
+                'Next.JS Developer',
               ]}
               wrapper='span'
               speed={50}

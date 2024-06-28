@@ -23,9 +23,9 @@ const AboutSection = () => {
           <p className='text-base flex flex-col gap-4'>
             Enthusiastic and aspiring web developer who is proficient in
             building user interfaces with React and also creating full stack web
-            application with React, Node.js Express and MongoDB. I thrive on
-            challenges and view each project as a chance to enhance my skills
-            and contribute to innovative solutions.{' '}
+            application with Next.JS, React, Node.js Express and MongoDB. I
+            thrive on challenges and view each project as a chance to enhance my
+            skills and contribute to innovative solutions.{' '}
             <span className='border border-white font-thin p-4 italic'>
               Eager to apply my knowledge in a real-world setting, I am
               passionate about creating engaging and responsive user interfaces
