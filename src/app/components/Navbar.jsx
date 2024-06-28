@@ -1,4 +1,5 @@
 'use client'
+import useIncrementView from '@/utils/useIncrementView.js'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
 import { motion, useTime, useTransform } from 'framer-motion'
 import Link from 'next/link'
@@ -23,6 +24,8 @@ const navLinks = [
 ]
 
 const Navbar = () => {
+  useIncrementView()
+
   const [navbarOpen, setNavbarOpen] = useState(false)
   const { handleClickToScroll, sectionRefs } = useContext(ScrollContext)
   const time = useTime()
