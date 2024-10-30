@@ -26,7 +26,7 @@ const ProjectCard = ({ project }) => {
             data-tip='Client'
           >
             <Link className='p-4' target='blank' href={`${gitUrl[0]}`}>
-              <ComputerDesktopIcon className='h-10 w-10 text-[#ADB7BE] absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 cursor-none hover:text-white group-hover/link:text-white' />
+              <ComputerDesktopIcon className='h-10 w-10 text-[#ADB7BE] absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 cursor-pointer hover:text-white group-hover/link:text-white' />
             </Link>
           </div>
           <div
@@ -39,7 +39,7 @@ const ProjectCard = ({ project }) => {
               data-tip='Server'
               href={`${gitUrl[1]}`}
             >
-              <GlobeAltIcon className='tooltip h-10 w-10 text-[#ADB7BE] absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 cursor-none hover:text-white group-hover/link:text-white' />
+              <GlobeAltIcon className='tooltip h-10 w-10 text-[#ADB7BE] absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 cursor-pointer hover:text-white group-hover/link:text-white' />
             </Link>
           </div>
           <div
@@ -47,7 +47,7 @@ const ProjectCard = ({ project }) => {
             data-tip='Live'
           >
             <Link className='p-4' target='blank' href={previewUrl}>
-              <EyeIcon className='h-10 w-10 text-[#ADB7BE] absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 cursor-none hover:text-white group-hover/link:text-white' />
+              <EyeIcon className='h-10 w-10 text-[#ADB7BE] absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 cursor-pointer hover:text-white group-hover/link:text-white' />
             </Link>
           </div>
         </div>

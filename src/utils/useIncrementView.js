@@ -6,12 +6,12 @@ const useIncrementView = () => {
     const increment = async () => {
       try {
         const data = await incrementViewCount()
-        console.log(data)
         return data
       } catch (error) {
         return null
       }
     }
+    if(window.location.hostname) return
     increment()
   }, [])
 }

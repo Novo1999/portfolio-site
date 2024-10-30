@@ -3,11 +3,11 @@ import { createContext, useRef } from 'react'
 import { Toaster } from 'react-hot-toast'
 import AboutSection from './components/AboutSection'
 import EmailSection from './components/EmailSection'
+import ExperienceSection from './components/ExperienceSection.jsx'
 import Footer from './components/Footer'
 import HeroSection from './components/HeroSection'
 import Navbar from './components/Navbar'
 import ProjectSection from './components/ProjectSection'
-import { FollowerPointerCard } from './components/ui/following-pointer.jsx'
 import { TracingBeam } from './components/ui/tracing-beam.jsx'
 export const ScrollContext = createContext(null)
 
@@ -16,6 +16,7 @@ export default function Home() {
     about: useRef(null),
     projects: useRef(null),
     contact: useRef(null),
+    experience: useRef(null),
   }
 
   const handleClickToScroll = (e, ref) => {
@@ -28,19 +29,18 @@ export default function Home() {
 
   return (
     <ScrollContext.Provider value={{ sectionRefs, handleClickToScroll }}>
-      <FollowerPointerCard>
         <main className='flex min-h-screen flex-col bg-slate-900'>
           <Toaster />
           <Navbar />
           <TracingBeam className='container mx-auto mt-24 px-12 py-4'>
             <HeroSection />
+            <ExperienceSection />
             <ProjectSection />
             <AboutSection />
             <EmailSection />
             <Footer />
           </TracingBeam>
         </main>
-      </FollowerPointerCard>
     </ScrollContext.Provider>
   )
 }

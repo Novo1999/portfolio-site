@@ -73,7 +73,7 @@ export const PROJECTS_DATA = [
   },
   {
     id: 4,
-    title: 'Kanban Board Application',
+    title: 'Flowboard',
     description:
       'Kanban Board Application built with MERN stack. User can create boards, add tasks, subtasks and edit them. They can also drag and drop which has been implemented using react dnd',
     image: '/images/projects/Kanban.png',

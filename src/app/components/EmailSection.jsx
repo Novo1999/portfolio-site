@@ -56,7 +56,7 @@ const EmailSection = () => {
         </p>
         <div className='socials flex flex-row gap-2'>
           <Link
-            className='cursor-none'
+            className='cursor-pointer'
             target='blank'
             href='https://github.com/Novo1999'
           >
@@ -67,7 +67,7 @@ const EmailSection = () => {
             />
           </Link>
           <Link
-            className='cursor-none'
+            className='cursor-pointer'
             target='blank'
             href='https://www.facebook.com/Novodipp/'
           >

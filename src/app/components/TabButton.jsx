@@ -8,7 +8,7 @@ const variants = {
 const TabButton = ({ active, selectTab, children }) => {
   const buttonClasses = active ? 'text-white' : 'text-gray-400'
   return (
-    <button onClick={selectTab} className='cursor-none'>
+    <button onClick={selectTab} className='cursor-pointer'>
       <p
         className={`mr-3 font-semibold hover:text-white capitalize ${buttonClasses}`}
       >

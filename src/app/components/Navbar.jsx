@@ -14,6 +14,10 @@ const navLinks = [
     path: 'about',
   },
   {
+    title: 'Experience',
+    path: 'experience',
+  },
+  {
     title: 'Projects',
     path: 'projects',
   },
@@ -33,10 +37,10 @@ const Navbar = () => {
 
   return (
     <nav className='fixed top-0 left-0 right-0 z-30 bg-slate-900 bg-opacity-100'>
-      <div className='flex container *:cursor-none flex-wrap items-center justify-between mx-auto px-4 py-2 lg:py-4'>
+      <div className='flex container *:cursor-pointer flex-wrap items-center justify-between mx-auto px-4 py-2 lg:py-4'>
         <Link
           href={'/'}
-          className='text-2xl md:text-5xl text-white font-semibold cursor-none'
+          className='text-2xl md:text-5xl text-white font-semibold cursor-pointer'
         >
           <div className='flex justify-center items-center gap-2'>
             {/* LOGO */}
@@ -77,7 +81,7 @@ const Navbar = () => {
           )}
         </div>
         <div className='menu hidden md:block md:w-auto' id='navbar'>
-          <ul className='flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0 cursor-none'>
+          <ul className='flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0 cursor-pointer'>
             {navLinks.map((link, index) => {
               const { title, path } = link
               return (
