@@ -11,7 +11,7 @@ const useIncrementView = () => {
         return null
       }
     }
-    if(window.location.hostname) return
+    if(window.location.hostname === 'localhost') return
     increment()
   }, [])
 }
