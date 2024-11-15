@@ -16,3 +16,14 @@ export const incrementViewCount = async () => {
     return error
   }
 }
+
+
+export const getViewCount = async () => {
+  try {
+    await connectMongo()
+    const data = await ViewCountModel.findById(process.env.DB_ID).select("viewCount -_id")
+    return data
+  } catch(error) {
+    return error
+  }
+}
