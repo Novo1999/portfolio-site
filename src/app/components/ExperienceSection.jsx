@@ -13,7 +13,7 @@ const ExperienceSection = () => {
             <h2 ref={ref} className="text-center text-4xl font-bold text-white mt-4 mb-4 md:mb-6">
                 My Experience
             </h2>
-            {myExperience.map(({ companyName, technologies, timeline, position, website }) => (
+            {myExperience.map(({ companyName, technologies, timeline, position, website, responsibilities }) => (
                 <div key={companyName} className="card lg:card-side bg-base-500 shadow-xl border">
                     <div className="card-body">
                         <div className="flex gap-2 items-center">
@@ -24,6 +24,12 @@ const ExperienceSection = () => {
                             </Link>
                         </div>
                         <p>{timeline}</p>
+                        <ul className='list-disc my-2'>
+                            <h3 className='font-bold border-b w-fit mb-2'>Responsibilities</h3>
+                            {responsibilities.map(resp => (
+                                <li key={resp}>{resp}</li>
+                            ))}
+                        </ul>
 
                         <div className="flex gap-2">
                             {technologies.map((tech) => (
@@ -41,13 +47,14 @@ const ExperienceSection = () => {
 export default ExperienceSection
 
 class ExperienceCreator {
-    constructor(companyName, technologies, website, timeline, position) {
+    constructor(companyName, technologies, website, timeline, position, responsibilities) {
         this.companyName = companyName
         this.technologies = technologies
         this.website = website
         this.timeline = timeline
         this.position = position
+        this.responsibilities = responsibilities
     }
 }
 
-const myExperience = [new ExperienceCreator('Wensyve', ['React', 'Next.js', 'TypeScript'], 'https://wensyve.com/', '2024 - Present', 'Junior Frontend Developer')]
+const myExperience = [new ExperienceCreator('Wensyve', ['React', 'Next.js', 'TypeScript'], 'https://wensyve.com/', '2024 - Present', 'Junior Frontend Developer', ["Maintain inventory SAAS application named Wenventory", "Design and Develop E-commerce Websites using demanding technologies like Next.JS | React | Astro"])]
