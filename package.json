@@ -20,6 +20,7 @@
     "@react-email/tailwind": "0.0.12",
     "@react-email/text": "^0.0.6",
     "axios": "^1.6.2",
+    "bcryptjs": "^2.4.3",
     "clsx": "^2.1.0",
     "dotenv": "^16.3.1",
     "framer-motion": "^10.18.0",
@@ -36,6 +37,8 @@
     "tailwind-merge": "^2.2.2"
   },
   "devDependencies": {
+    "@types/node": "22.10.1",
+    "@types/react": "19.0.1",
     "autoprefixer": "^10.0.1",
     "daisyui": "^4.4.10",
     "eslint": "^8",
