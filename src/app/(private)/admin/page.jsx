@@ -1,19 +1,25 @@
 'use client'
 import { useAuth } from '@/app/context/AuthContext.js'
-import React, { useState } from 'react'
+import { useRouter } from 'next/navigation.js'
+import React, { useEffect, useState } from 'react'
 
 const AdminPage = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const { login, isAuthenticated, setIsAuthenticated } = useAuth()
+  const { push } = useRouter()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     const data = await login(email, password)
     if (!data?.status) return
     setIsAuthenticated(data?.status)
-    document.cookie = 'status=logged_in_nextfolio'
+    document.cookie = 'folio-login-status=logged_in_nextfolio'
   }
+
+  useEffect(() => {
+    if (isAuthenticated) push('/admin/dashboard')
+  }, [isAuthenticated, push])
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-base-200">

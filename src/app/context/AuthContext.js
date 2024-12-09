@@ -1,5 +1,6 @@
 'use client'
 import axios from 'axios'
+import { useRouter } from 'next/navigation.js'
 import React, { createContext, useContext, useEffect, useState } from 'react'
 
 const AuthContext = createContext(null)
@@ -10,6 +11,7 @@ export const useAuth = () => {
 
 export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
+  const router = useRouter()
 
   const login = async (email, password) => {
     try {
@@ -22,11 +24,12 @@ export const AuthProvider = ({ children }) => {
 
   const logout = () => {
     setIsAuthenticated(false)
-    document.cookie = 'status=false'
+    document.cookie = 'folio-login-status=; Max-Age=0; path=/; domain=' + location.hostname
+    router.push('/admin')
   }
 
   useEffect(() => {
-    const foundCookie = document.cookie.split(';').find((cookie) => cookie.trim() === 'status=logged_in_nextfolio')
+    const foundCookie = document.cookie.split(';').find((cookie) => cookie.trim() === 'folio-login-status=logged_in_nextfolio')
     setIsAuthenticated(!!foundCookie)
   }, [])
 
