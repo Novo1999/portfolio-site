@@ -22,6 +22,7 @@ export const AuthProvider = ({ children }) => {
     }
   }
 
+  console.log(process.env.NEXT_PUBLIC_COOKIE_KEY)
   const logout = () => {
     setIsAuthenticated(false)
     document.cookie = `${process.env.NEXT_PUBLIC_COOKIE_KEY}; Max-Age=0; path=/; domain=` + location.hostname

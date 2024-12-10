@@ -1,23 +1,26 @@
 'use client'
 import { useAuth } from '@/app/context/AuthContext.js'
 import axios from 'axios'
-import { notFound } from 'next/navigation.js'
+import { notFound, useRouter } from 'next/navigation.js'
 import { useEffect, useState } from 'react'
 
 const DashboardPage = () => {
   const [resumeUrl, setResumeUrl] = useState('')
+  const router = useRouter()
+  const [checkingAuth, setCheckingAuth] = useState(true)
 
   const { isAuthenticated, logout } = useAuth()
+  console.log('🚀 ~ DashboardPage ~ isAuthenticated:', isAuthenticated)
 
   useEffect(() => {
-    let timeoutId
     if (!isAuthenticated) {
-      timeoutId = setTimeout(() => {
-        if (!isAuthenticated) notFound()
-      }, 3000)
+      setTimeout(() => {
+        if (!isAuthenticated) router.push('/admin')
+      }, 500)
+    } else {
+      setCheckingAuth(false)
     }
-    return () => clearTimeout(timeoutId)
-  }, [isAuthenticated])
+  }, [isAuthenticated, router])
 
   const postUrl = async () => {
     try {
@@ -27,14 +30,13 @@ const DashboardPage = () => {
       throw new Error(error)
     }
   }
-
   const handleSubmit = async (e) => {
     e.preventDefault()
     await postUrl()
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-base-200">
+    <div className={`flex items-center justify-center min-h-screen bg-base-200 ${checkingAuth ? 'opacity-0' : 'opacity-100'}`}>
       <button onClick={logout} className="btn btn-primary w-fit absolute top-4 right-4">
         LOG OUT
       </button>
