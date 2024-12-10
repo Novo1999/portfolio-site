@@ -10,7 +10,6 @@ const DashboardPage = () => {
   const [checkingAuth, setCheckingAuth] = useState(true)
 
   const { isAuthenticated, logout } = useAuth()
-  console.log('🚀 ~ DashboardPage ~ isAuthenticated:', isAuthenticated)
 
   useEffect(() => {
     if (!isAuthenticated) {
