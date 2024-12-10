@@ -14,7 +14,7 @@ const AdminPage = () => {
     const data = await login(email, password)
     if (!data?.status) return
     setIsAuthenticated(data?.status)
-    document.cookie = 'folio-login-status=logged_in_nextfolio'
+    document.cookie = process.env.NEXT_PUBLIC_COOKIE
   }
 
   useEffect(() => {

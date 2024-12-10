@@ -24,12 +24,12 @@ export const AuthProvider = ({ children }) => {
 
   const logout = () => {
     setIsAuthenticated(false)
-    document.cookie = 'folio-login-status=; Max-Age=0; path=/; domain=' + location.hostname
+    document.cookie = `${process.env.NEXT_PUBLIC_COOKIE_KEY}; Max-Age=0; path=/; domain=` + location.hostname
     router.push('/admin')
   }
 
   useEffect(() => {
-    const foundCookie = document.cookie.split(';').find((cookie) => cookie.trim() === 'folio-login-status=logged_in_nextfolio')
+    const foundCookie = document.cookie.split(';').find((cookie) => cookie.trim() === process.env.NEXT_PUBLIC_COOKIE)
     setIsAuthenticated(!!foundCookie)
   }, [])
 
