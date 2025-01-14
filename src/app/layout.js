@@ -4,7 +4,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  metadataBase: new URL('http://www.novofolio.dcccse.com'),
+  metadataBase: new URL('https://novodip.vercel.app/'),
   title: 'Novodip',
   description: 'Novo Portfolio Website',
   keywords: ['novofolio', 'novodip mondal', 'novodip', 'Novodip', 'Novodip web dev', 'Novo Web Dev', 'Novodip Mondal'],
